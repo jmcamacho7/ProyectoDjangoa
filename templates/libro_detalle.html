@@ -1,0 +1,32 @@
+{% include "header.html" %}
+
+{% block content %}
+<body>
+<table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Especie</th>
+                                <th>Nivel</th>
+                                <th>Habilidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>{{pokemon.id}}</td>
+                                    <td>{{pokemon.nombre }}</td>
+                                    <td>{{pokemon.especie }}</td>
+                                    <td>{{pokemon.nivel }}</td>
+                                    <td>{{pokemon.habilidad}}</td>
+                                </tr>
+                        </tbody>
+                    </table>
+
+
+
+<a href="/libreria/libros/editar/{{ pokemon.id }}">Editar Pokemon</a>
+<a href="/libreria/libros/borrar/{{ pokemon.id }}">Borrar Pokemon</a>
+
+</body>
+{% endblock %}

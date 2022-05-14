@@ -1,0 +1,40 @@
+
+{% include "header.html" %}
+
+{% block content %}
+
+
+<h1>Pokemon</h1>
+
+<table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Especie</th>
+            <th scope="col">Nivel</th>
+            <th scope="col">Habilidad</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for bicho in pokemones %}
+
+            <tr>
+                <th>{{ bicho.id }}</th>
+                <td>{{ bicho.nombre }}</td>
+                <td>{{ bicho.especie }}</td>
+                <td>{{ bicho.nivel }}</td>
+                <td>{{ bicho.habilidad }}</td>
+                <td><a href="/libreria/libros/{{ bicho.id }}">Detalle Pokemon</a></td>
+            </tr>
+
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
+

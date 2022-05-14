@@ -1,0 +1,28 @@
+{% include "header.html" %}
+
+{% block content %}
+<form action="/libreria/libros/crear/" method="POST">
+
+    {% csrf_token %}
+
+    <label for="id"> Id: </label>
+    <input id="id" type="number" name="id" value="">
+
+    <label for="nombre"> Nombre: </label>
+    <input id="nombre" type="text" name="nombre" value="">
+
+    <label for="especie"> Especie </label>
+    <input id="especie" type="text" name="especie" value="">
+
+    <label for="nivel"> Nivel </label>
+    <input id="nivel" type="number" name="nivel" value="">
+
+    <label for="habilidad"> Habilidad </label>
+    <input id="habilidad" type="text" name="habilidad" value="">
+
+    <input type="submit" value="Crear">
+
+
+</form>
+
+{% endblock %}

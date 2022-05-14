@@ -1,0 +1,29 @@
+{% include "header.html" %}
+
+{% block content %}
+
+<form action="/libreria/libros/editar/{{bicho.id}}" method="POST">
+
+    {% csrf_token %}
+
+    <label for="id"> Id: </label>
+    <input id="id" type="number" name="id" disabled value="{{ bicho.id}}">
+
+    <label for="nombre"> Nombre: </label>
+    <input id="nombre" type="text" name="nombre" value="{{ bicho.nombre}}">
+
+    <label for="especie"> Especie: </label>
+    <input id="especie" type="text" name="especie" value="{{ bicho.especie}}">
+
+    <label for="nivel"> Nivel: </label>
+    <input id="nivel" type="number" name="nivel" value="{{ bicho.nivel}}">
+
+    <label for="habilidad"> Habilidad: </label>
+    <input id="habilidad" type="text" name="habilidad" value="{{ bicho.habilidad}}">
+
+    <input type="submit" value="Editar">
+
+</form>
+
+
+{% endblock %}
