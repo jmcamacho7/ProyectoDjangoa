@@ -4,24 +4,45 @@
 <form action="/libreria/libros/crear/" method="POST">
 
     {% csrf_token %}
+<br>
 
-    <label for="id"> Id: </label>
-    <input id="id" type="number" name="id" value="">
+    <table>
+        <tr>
+            <th>
+                <label for="id"> Id: </label>
+                <input id="id" type="number" name="id" value="">
+            </th>
+        </tr>
 
-    <label for="nombre"> Nombre: </label>
-    <input id="nombre" type="text" name="nombre" value="">
+        <tr>
+            <th>
+                <label for="nombre"> Nombre: </label>
+                <input id="nombre" type="text" name="nombre" value="">
+            </th>
+        </tr>
 
-    <label for="especie"> Especie </label>
-    <input id="especie" type="text" name="especie" value="">
+        <tr>
+            <th>
+                <label for="especie"> Especie </label>
+                <input id="especie" type="text" name="especie" value="">
+            </th>
+        </tr>
 
-    <label for="nivel"> Nivel </label>
-    <input id="nivel" type="number" name="nivel" value="">
+        <tr>
+            <th>
+                <label for="nivel"> Nivel </label>
+                <input id="nivel" type="number" name="nivel" value="">
+            </th>
+        </tr>
 
-    <label for="habilidad"> Habilidad </label>
-    <input id="habilidad" type="text" name="habilidad" value="">
-
+        <tr>
+            <th>
+                <label for="habilidad"> Habilidad </label>
+                <input id="habilidad" type="text" name="habilidad" value="">
+            </th>
+        </tr>
+    </table>
     <input type="submit" value="Crear">
-
 
 </form>
 
