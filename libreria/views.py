@@ -32,15 +32,14 @@ def crear_pokemon(request):
 def editar_pokemon(request,id):
     if request.method == "GET":
         bicho = pokemon.objects.get(id=id)
-        return render(request, 'editar_libro.html', {'bicho': pokemon})
+        return render(request, 'editar_libro.html', {"pokemon": bicho})
     else:
-        bicho = pokemon()
-        bicho.id = request.POST.get('id')
+        bicho = pokemon.objects.get(id=id)
         bicho.nombre = request.POST.get('nombre')
         bicho.especie = request.POST.get('especie')
         bicho.nivel = request.POST.get('nivel')
         bicho.habilidad = request.POST.get("habilidad")
-        bicho.save(pokemon)
+        pokemon.save(bicho)
         return redirect('/libreria/libros')
 
 

@@ -2,24 +2,24 @@
 
 {% block content %}
 
-<form action="/libreria/libros/editar/{{bicho.id}}" method="POST">
+<form action="" method="POST">
 
     {% csrf_token %}
 
     <label for="id"> Id: </label>
-    <input id="id" type="number" name="id" disabled value="{{ bicho.id}}">
+    <input id="id" type="number" name="id" disabled value="{{ pokemon.id}}">
 
     <label for="nombre"> Nombre: </label>
-    <input id="nombre" type="text" name="nombre" value="{{ bicho.nombre}}">
+    <input id="nombre" type="text" name="nombre" value="{{ pokemon.nombre}}">
 
     <label for="especie"> Especie: </label>
-    <input id="especie" type="text" name="especie" value="{{ bicho.especie}}">
+    <input id="especie" type="text" name="especie" value="{{ pokemon.especie}}">
 
     <label for="nivel"> Nivel: </label>
-    <input id="nivel" type="number" name="nivel" value="{{ bicho.nivel}}">
+    <input id="nivel" type="number" name="nivel" value="{{ pokemon.nivel}}">
 
     <label for="habilidad"> Habilidad: </label>
-    <input id="habilidad" type="text" name="habilidad" value="{{ bicho.habilidad}}">
+    <input id="habilidad" type="text" name="habilidad" value="{{ pokemon.habilidad}}">
 
     <input type="submit" value="Editar">
 
